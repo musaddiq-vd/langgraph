@@ -37,3 +37,5 @@ while True:
         ]
     })
     print("\n🤖 AI: ",response["messages"][-1].content)
+
+
