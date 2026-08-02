@@ -23,7 +23,7 @@ graph.add_edge("chatbot",END)
 
 app = graph.compile()
 
-print("\t🤖 Welcome\nto exit type --> exit")
+print("\t🤖 Welcome\nType 'exit' to quit.\n")
 while True:
 
     user_input = input("👤 you: ")
