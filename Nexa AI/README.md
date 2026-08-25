@@ -30,11 +30,6 @@ through CloudFront and the backend exposed through an API endpoint.
 ## 🚀 Features
 
 -   💬 AI-powered chat interface
--   🌙 Dark / ☀️ Light mode
--   👤 User messages on the right
--   🤖 AI messages on the left
--   🧑 User and 🤖 bot avatars
--   📋 Copy response to clipboard
 -   👍 / 👎 feedback buttons
 -   🕒 Message timestamps
 -   🗂️ Recent chat history
@@ -48,43 +43,48 @@ through CloudFront and the backend exposed through an API endpoint.
 
 # 🏗️ Architecture
 
-``` text
-                         ┌──────────────────┐
-                         │       User       │
-                         │     Browser      │
-                         └────────┬─────────┘
-                                  │
-                                  ▼
-                         ┌──────────────────┐
-                         │   CloudFront     │
-                         │       CDN        │
-                         └────────┬─────────┘
-                                  │
-                                  ▼
-                         ┌──────────────────┐
-                         │       S3         │
-                         │  Nexa AI UI      │
-                         └──────────────────┘
-
-
-       Chat Request
-            │
-            ▼
-┌──────────────────┐
-│   API Gateway    │
-│      /chat       │
-└────────┬─────────┘
-         │
-         ▼
-┌──────────────────┐
-│   AWS Lambda     │
-│  Python Backend  │
-└────────┬─────────┘
-         │
-         ▼
-┌──────────────────┐
-│   AI Agent / LLM │
-└──────────────────┘
+```text
+                              ┌──────────────────────┐
+                              │    👤 User / Browser  │
+                              └───────────┬──────────┘
+                                          │
+                         ┌────────────────┴────────────────┐
+                         │                                 │
+                         ▼                                 ▼
+              ┌─────────────────────┐          ┌─────────────────────┐
+              │   ☁️ CloudFront     │          │   🚀 API Gateway    │
+              │        CDN          │          │     POST /chat      │
+              └──────────┬──────────┘          └──────────┬──────────┘
+                         │                                │
+                         ▼                                ▼
+              ┌─────────────────────┐          ┌─────────────────────┐
+              │     🪣 Amazon S3    │          │      FastAPI        │
+              │    Nexa AI UI       │          │   API Application   │
+              └─────────────────────┘          └──────────┬──────────┘
+                                                         │
+                                                         ▼
+                                              ┌─────────────────────┐
+                                              │    ⚡ AWS Lambda     │
+                                              │                      │
+                                              │      LangGraph       │
+                                              │    Agent Workflow    │
+                                              └──────────┬──────────┘
+                                                         │
+                                                         ▼
+                                              ┌─────────────────────┐
+                                              │      🤖 LLM          │
+                                              │  Response Generation │
+                                              └──────────┬──────────┘
+                                                         │
+                                                         │ AI Response
+                                                         ▼
+                                              ┌─────────────────────┐
+                                              │     API Gateway     │
+                                              │       /chat         │
+                                              └──────────┬──────────┘
+                                                         │
+                                                         ▼
+                                                  👤 User / Browser
 ```
 
 ------------------------------------------------------------------------
