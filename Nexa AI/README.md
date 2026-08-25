@@ -168,6 +168,8 @@ This deletes the CDK/CloudFormation stack and the resources managed by it.
 
 ⚠️ Some resources may be retained depending on their removal policy. Check the AWS Console if anything remains.
 
+```
+
 ## 🛠️ Manual Deployment
 
 This section describes the **direct AWS deployment process** used for
