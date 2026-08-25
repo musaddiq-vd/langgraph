@@ -1,6 +1,18 @@
 # 🤖 Nexa AI
 
-![alt text](image.png)
+## 🖼️ Screenshots
+
+### 🌐 Application
+![Nexa AI](./assets/1nexa-ai-architecture.png)
+
+### 🌙 Dark Mode
+![Nexa AI Dark Mode](./assets/2nexa-ai-architecture.png)
+
+### 💬 Chat Interface
+![Nexa AI Chat](./assets/3nexa-ai-architecture.png)
+
+### ☁️ AWS Deployment
+![Nexa AI AWS](./assets/4nexa-ai-architecture.png)
 
 ------------------------------------------------------------------------
 
