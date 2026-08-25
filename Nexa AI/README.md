@@ -1,23 +1,6 @@
 # 🤖 Nexa AI
 
-```{=html}
-<p align="center">
-```
-`<strong>`{=html}A modern AI chatbot deployed on AWS serverless
-architecture`</strong>`{=html}
-```{=html}
-</p>
-```
-```{=html}
-<p align="center">
-```
-`<img src="https://img.shields.io/badge/AWS-Cloud--Native-orange?style=for-the-badge&logo=amazonaws" alt="AWS">`{=html}
-`<img src="https://img.shields.io/badge/Frontend-HTML%2FCSS%2FJS-blue?style=for-the-badge&logo=html5" alt="Frontend">`{=html}
-`<img src="https://img.shields.io/badge/Backend-Python-green?style=for-the-badge&logo=python" alt="Python">`{=html}
-`<img src="https://img.shields.io/badge/Deployment-S3%20%2B%20CloudFront-purple?style=for-the-badge&logo=amazonaws" alt="Deployment">`{=html}
-```{=html}
-</p>
-```
+![alt text](image.png)
 
 ------------------------------------------------------------------------
 
