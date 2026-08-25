@@ -134,7 +134,7 @@ After cloning, choose a deployment method:
 
 ---
 
-## ⚙️ Automatic Deployment (AWS CDK)
+# ⚙️ Automatic Deployment (AWS CDK)
 
 Deploy the complete Nexa AI infrastructure using **AWS CDK**.
 
@@ -153,7 +153,7 @@ CDK deploys the required **S3, CloudFront, API Gateway and Lambda** resources au
 
 ---
 
-### 🗑️ Cleanup / Delete Resources
+## 🗑️ Cleanup / Delete Resources
 
 After testing, you can delete the deployed AWS resources to avoid unnecessary charges.
 
@@ -170,7 +170,7 @@ This deletes the CDK/CloudFormation stack and the resources managed by it.
 
 ```
 
-## 🛠️ Manual Deployment
+# 🛠️ Manual Deployment
 
 This section describes the **direct AWS deployment process** used for
 Nexa AI.
