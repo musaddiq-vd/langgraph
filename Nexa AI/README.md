@@ -127,7 +127,7 @@ Nexa-AI/
 ```bash
 git clone https://github.com/musaddiq-vd/langgraph.git
 cd langgraph
-cd "Nexa AI"
+cd Nexa AI
 ```
 
 After cloning, choose a deployment method:
@@ -155,6 +155,21 @@ CDK deploys the required **S3, CloudFront, API Gateway and Lambda** resources au
 > ⚠️ **API Endpoint:** After deployment, API Gateway may generate a new endpoint. Update `API_URL` in `frontend/index.html` with the new `/chat` endpoint, then redeploy the frontend if required.
 
 ---
+
+### 🗑️ Cleanup / Delete Resources
+
+After testing, you can delete the deployed AWS resources to avoid unnecessary charges.
+
+From the `infrastructure` directory, run:
+
+```bash
+cdk destroy
+
+Confirm with y.
+
+This deletes the CDK/CloudFormation stack and the resources managed by it.
+
+⚠️ Some resources may be retained depending on their removal policy. Check the AWS Console if anything remains.
 
 ## 🛠️ Manual Deployment
 
