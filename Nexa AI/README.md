@@ -30,10 +30,7 @@ through CloudFront and the backend exposed through an API endpoint.
 ## 🚀 Features
 
 -   💬 AI-powered chat interface
--   👍 / 👎 feedback buttons
--   🕒 Message timestamps
 -   🗂️ Recent chat history
--   🗑️ Delete recent chats
 -   📝 Conversation-based chat titles
 -   📱 Responsive modern UI
 -   ⚡ Serverless AWS deployment
