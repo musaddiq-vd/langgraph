@@ -195,7 +195,6 @@ cd "..\backend"
 Create the package directory:
 
 ```powershell
-Remove-Item -Recurse -Force .\package -ErrorAction SilentlyContinue
 mkdir package
 ```
 
@@ -223,17 +222,7 @@ backend/
     └── ...
 ```
 
-#### 5. Configure CDK Lambda asset path
-
-In `infrastructure/infrastructure/infrastructure_stack.py`, use:
-
-```python
-code=lambda_.Code.from_asset("../backend/package")
-```
-
-This path must match the generated Lambda deployment package.
-
-#### 6. Bootstrap and deploy
+#### 5. Bootstrap and deploy
 
 From the `infrastructure` directory:
 
