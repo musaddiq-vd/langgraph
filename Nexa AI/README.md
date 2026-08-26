@@ -250,7 +250,7 @@ cdk deploy
 
 Ctrl + F5
 
-### ✅ Your AI is Ready!
+# ✅ Your AI is Ready!
 
 Your Nexa AI application is now deployed and ready to test.
 
