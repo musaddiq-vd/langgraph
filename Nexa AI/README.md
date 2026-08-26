@@ -250,6 +250,17 @@ cdk deploy
 
 Ctrl + F5
 
+### ✅ Your AI is Ready!
+
+Your Nexa AI application is now deployed and ready to test.
+
+Open the **CloudFront URL** in your browser and start chatting with your AI Assistant.
+
+Example:
+
+`https://YOUR-CLOUDFRONT-DOMAIN.cloudfront.net`
+
+
 If CDK shows a security/IAM approval prompt, review the changes and enter `y` to continue.
 
 CDK deploys the required **S3, CloudFront, API Gateway and Lambda** resources automatically.
