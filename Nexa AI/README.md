@@ -201,7 +201,7 @@ mkdir package
 Install backend dependencies into the package:
 
 ```powershell
-python -m pip install -r requirements.txt -t .\package
+python -m pip install -r requirements.txt --platform manylinux2014_x86_64 --implementation cp --python-version 3.11 --only-binary=:all: -t .\package --upgrade
 ```
 
 Copy the Lambda application file:
