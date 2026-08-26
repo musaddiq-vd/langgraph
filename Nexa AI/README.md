@@ -231,6 +231,24 @@ cd "..\infrastructure"
 cdk bootstrap
 cdk deploy
 ```
+### Update Frontend API URL
+
+1. Open `frontend/index.html`
+
+2. Update:
+   const API_URL = "YOUR_API_GATEWAY_CHAT_URL";
+   take it from api gatway, copy and past in index.html
+
+4. Save the file.
+
+5. Deploy using CDK:
+
+cd infrastructure
+cdk deploy
+
+5. Open the CloudFront URL and refresh with:
+
+Ctrl + F5
 
 If CDK shows a security/IAM approval prompt, review the changes and enter `y` to continue.
 
