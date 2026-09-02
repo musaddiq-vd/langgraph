@@ -55,3 +55,27 @@ For learning LangGraph and understanding how ReAct agents work internally, the `
 | Conditional decision is handled internally | `should_continue()` is defined manually |
 | Easier for quick implementation | More important for understanding the architecture |
 | Best for using an agent | Best for building and controlling the agent workflow |
+
+
+## 03. Agent Memory & Checkpointing
+
+Added short-term memory to the LangGraph ReAct agent using `InMemorySaver`.
+
+- `InMemorySaver` stores conversation state.
+- `thread_id` identifies a conversation.
+- The same `thread_id` allows the agent to remember previous messages.
+
+### Flow
+
+User → State → LLM/Tool → Checkpoint → Next Message → Previous Context
+
+### Production Consideration
+
+For production, `InMemorySaver` can be replaced with a persistent checkpointer.
+
+Common options:
+
+1. **PostgreSQL** — Reliable relational database and commonly used for production.
+2. **DynamoDB** — Good choice for AWS/serverless applications. 
+3. **Redis** — Useful for fast, low-latency state/session storage.
+4. **MongoDB** — Suitable for document-based applications.
