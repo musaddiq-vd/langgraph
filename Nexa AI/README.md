@@ -977,24 +977,18 @@ Content-Type: application/json
 
 For a production environment, consider adding:
 
--   🔑 Amazon Cognito authentication
--   🪪 JWT authorization
 -   🛡️ AWS WAF
 -   🚦 API Gateway throttling
 -   🔐 AWS Secrets Manager
 -   📊 CloudWatch alarms
--   🔒 Private S3 bucket + CloudFront OAC
 -   🌐 Custom domain
 -   🔐 HTTPS
--   🧩 IAM least-privilege policies
 -   📈 Cost monitoring and AWS Budgets
 
 ------------------------------------------------------------------------
 
 # 📈 Future Improvements
 
--   [ ] Amazon Cognito authentication
--   [ ] Persistent chat history with DynamoDB
 -   [ ] Streaming AI responses
 -   [ ] File upload
 -   [ ] Amazon Bedrock Knowledge Bases
@@ -1030,7 +1024,7 @@ For a production environment, consider adding:
 
 # 👨‍💻 Author
 
-**Musaddiq Khan**
+**Musaddique Khan**
 
 GenAI Engineer \| Python \| AWS \| Generative AI \| RAG \| LangChain \|
 LangGraph
@@ -1038,9 +1032,9 @@ LangGraph
 ------------------------------------------------------------------------
 
 ```{=html}
-<p align="center">
+
 ```
 ⭐ If you find this project useful, consider giving it a star!
 ```{=html}
-</p>
+
 ```
