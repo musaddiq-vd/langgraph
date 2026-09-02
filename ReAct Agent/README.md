@@ -79,3 +79,18 @@ Common options:
 2. **DynamoDB** — Good choice for AWS/serverless applications. 
 3. **Redis** — Useful for fast, low-latency state/session storage.
 4. **MongoDB** — Suitable for document-based applications.
+
+## 04. Error Handling
+
+Added error handling to the LangGraph ReAct agent using `ToolNode`.
+
+- `handle_tool_errors=True` prevents the agent from crashing when a tool fails.
+- Tool errors are converted into a message that the LLM can understand.
+- The LLM can then decide how to respond to the error.
+
+### Flow
+
+User → LLM → Tool → Error → ToolNode Handles Error → LLM → Final Response
+
+> Note: `handle_tool_errors=True` provides error handling, not automatic retry.
+
