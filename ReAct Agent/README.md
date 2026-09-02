@@ -44,13 +44,14 @@ END
 
 For learning LangGraph and understanding how ReAct agents work internally, the `StateGraph()` approach is more important.
 
+### Quick Comparison
 
-Quick Comparison
-First Approach	StateGraph Approach
-Uses create_agent()	Uses StateGraph() manually
-LangGraph internal flow is mostly hidden	LangGraph flow is explicitly defined
-Simple implementation	ReAct architecture is clearly visible
-Tool calling is handled internally	Tool execution is handled using ToolNode
-Conditional decision is handled internally	should_continue() is defined manually
-Easier for quick implementation	More important for understanding the architecture
-Best for using an agent	Best for building and controlling the agent workflow
+| First Approach | StateGraph Approach |
+|---|---|
+| Uses `create_agent()` | Uses `StateGraph()` manually |
+| LangGraph internal flow is mostly hidden | LangGraph flow is explicitly defined |
+| Simple implementation | ReAct architecture is clearly visible |
+| Tool calling is handled internally | Tool execution is handled using `ToolNode` |
+| Conditional decision is handled internally | `should_continue()` is defined manually |
+| Easier for quick implementation | More important for understanding the architecture |
+| Best for using an agent | Best for building and controlling the agent workflow |
