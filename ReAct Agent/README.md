@@ -94,3 +94,14 @@ User → LLM → Tool → Error → ToolNode Handles Error → LLM → Final Res
 
 > Note: `handle_tool_errors=True` provides error handling, not automatic retry.
 
+Added a retry policy to the LangGraph ReAct agent.
+
+- `RetryPolicy` automatically retries a failed node.
+- `max_attempts=3` allows up to 3 total execution attempts.
+- Useful for handling temporary LLM or node failures.
+
+### Flow
+
+LLM Node → Failure → Retry → Retry → Success / Final Failure
+
+> Note: Retry Policy handles retryable node failures, while `handle_tool_errors=True` handles tool errors.
