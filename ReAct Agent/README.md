@@ -152,3 +152,24 @@ from dotenv import load_dotenv
 
 # Load environment variables from .env
 load_dotenv()
+
+## ReAct Agent with LangGraph
+
+Implemented a basic ReAct Agent using `StateGraph`, `ToolNode`, and LLM tool calling.
+
+### Key Components
+
+- **LLM** → Decides whether a tool is required.
+- **Tool** → Performs the required action.
+- **State** → Maintains conversation messages.
+- **ToolNode** → Executes tool calls.
+- **Conditional Routing** → Decides between tool execution and final answer.
+- **ReAct Loop** → LLM → Tool → LLM → Final Answer.
+
+### Flow
+
+User → LLM → Tool Decision → ToolNode → Tool Result → LLM → Final Answer
+
+### Purpose
+
+This implementation demonstrates the core ReAct agent architecture explicitly using LangGraph.
