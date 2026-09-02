@@ -5,6 +5,7 @@ from langchain_core.tools import tool
 from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
+from langgraph.types import RetryPolicy
 
 
 # Define a tool that can raise an error
@@ -61,8 +62,18 @@ def should_continue(state: State):
 # Create graph
 graph = StateGraph(State)
 
-graph.add_node("chatbot", chatbot)
+
+# Add LLM node with retry policy
+graph.add_node(
+    "chatbot",
+    chatbot,
+    retry_policy=RetryPolicy(
+        max_attempts=3
+    )
+)
+
 graph.add_node("tools", tool_node)
+
 
 graph.add_edge(START, "chatbot")
 
