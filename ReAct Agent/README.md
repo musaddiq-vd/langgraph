@@ -152,6 +152,7 @@ from dotenv import load_dotenv
 
 # Load environment variables from .env
 load_dotenv()
+```
 
 ## ReAct Agent with LangGraph
 
