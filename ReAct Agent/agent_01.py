@@ -38,7 +38,6 @@ print(result["messages"][-1].content)
 
 """
 Short Purpose
-
 This code creates a basic AI agent that can use an external tool (calculator, weather) to answer the user's question.
 
 Flow:
