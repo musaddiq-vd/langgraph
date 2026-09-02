@@ -129,3 +129,26 @@ User → LLM → Tool Call → `interrupt()` → Human Approval → `Command(res
 
 > HITL is useful when an agent needs human approval before performing sensitive or important actions.
 
+## 06. LangSmith Observability
+
+Added LangSmith tracing to monitor and debug the LangGraph ReAct agent.
+
+- Loads LangSmith configuration from `.env`.
+- `LANGSMITH_TRACING=true` enables tracing.
+- `LANGSMITH_PROJECT` groups agent runs under a project.
+- LangSmith helps track LLM calls, tool calls, latency, and errors.
+
+### `.env`
+
+```env
+LANGSMITH_API_KEY=your_api_key
+LANGSMITH_TRACING=true
+LANGSMITH_PROJECT=langgraph-react-agent
+
+### Environment Variables
+
+```python
+from dotenv import load_dotenv
+
+# Load environment variables from .env
+load_dotenv()
