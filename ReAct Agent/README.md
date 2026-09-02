@@ -106,3 +106,26 @@ Added a retry policy to the LangGraph ReAct agent.
 LLM Node → Failure → Retry → Retry → Success / Final Failure
 
 > Note: Retry Policy handles retryable node failures, while `handle_tool_errors=True` handles tool errors.
+
+## 05. Human-in-the-Loop (HITL)
+
+Added Human-in-the-Loop approval to the LangGraph ReAct agent.
+
+- `interrupt()` pauses the agent and waits for human input.
+- `Command(resume="yes")` resumes the paused execution.
+- `thread_id` maintains the same conversation state.
+- Checkpointing allows the agent to pause and resume safely.
+
+### Flow
+
+User → LLM → Tool Call → `interrupt()` → Human Approval → `Command(resume)` → Tool → LLM → Final Answer
+
+### Key Concepts
+
+- **`interrupt()`** → Pause agent execution.
+- **`Command(resume=...)`** → Resume execution after human input.
+- **Checkpointer** → Saves the agent state while paused.
+- **`thread_id`** → Identifies the conversation/execution.
+
+> HITL is useful when an agent needs human approval before performing sensitive or important actions.
+
